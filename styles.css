@@ -7,7 +7,7 @@ body{
     align-content: center;
     margin: auto;
     font-family: 'Poppins', sans-serif;
-    color: rgb(29, 29, 29);
+    color: rgb(255, 255, 255);
     background-color:rgb(253, 251, 250);
 }
 
@@ -16,6 +16,6 @@ body{
     width: 1000px;
     background-color:rgb(36, 39, 49);
     border-radius: 19px;
-    border: dashed 2px rgb(255, 207, 207);
+    border: dashed 2px rgb(255, 121, 121);
     padding: 35px 35px;
 }
