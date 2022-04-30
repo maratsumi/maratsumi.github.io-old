@@ -10,3 +10,12 @@ body{
     color: rgb(29, 29, 29);
     background-color:rgb(253, 251, 250);
 }
+
+.main{
+    height: auto;
+    width: 1000px;
+    background-color:rgb(36, 39, 49);
+    border-radius: 19px;
+    border: dashed 2px rgb(255, 207, 207);
+    padding: 35px 35px;
+}
