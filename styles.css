@@ -9,6 +9,7 @@ body{
     font-family: 'Poppins', sans-serif;
     color: rgb(255, 255, 255);
     background-color:rgb(253, 251, 250);
+    padding: 30px 25px;
 }
 
 .main{
@@ -17,5 +18,5 @@ body{
     background-color:rgb(36, 39, 49);
     border-radius: 19px;
     border: dashed 2px rgb(255, 121, 121);
-    padding: 35px 35px;
+    padding: 35px;
 }
