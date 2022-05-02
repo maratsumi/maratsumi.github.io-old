@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto+Mono&display=swap');
 
+html{
+    height: 100%;
+}
+
 body{
     display: none;
     align-items: center;
     justify-content: center;
     align-content: center;
     margin: auto;
+    padding: 40px 25px;
     font-family: 'Poppins', sans-serif;
     color: rgb(255, 255, 255);
-    background-color:rgb(253, 251, 250);
-    padding: 50px 25px;
+    background-image: linear-gradient(225deg, rgb(132, 201, 143) 32%, rgb(163, 196, 175) 100%);
 }
 
 .main{
