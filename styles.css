@@ -20,7 +20,32 @@ body{
     height: auto;
     width: 1000px;
     background-color:#FAFAFA;
-    border-radius: 19px;
+    border-radius: 24px;
     border: dashed 2px #FF739D;
-    padding: 65px 50px;
+    padding: 50px 50px;
+    padding-bottom: 65px;
+}
+
+#titleHeader{
+    padding-bottom: 35px;
+}
+
+#divider1{
+    border: 0;
+    border-top: 2px dashed #FF739D;
+    opacity: 1;
+    background-image: none;
+    color: white;
+    width: 25rem;
+}
+
+#list1{
+    font-size: 24px;
+}
+
+#testimage{
+    height:auto;
+    align-content: flex-end;
+    width:75%;
+    border-radius: 17px;
 }
