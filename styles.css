@@ -54,6 +54,7 @@ button{
     background-color: white;
     color:#9e50cc;
     height: auto;
+    width: auto;
 }
 
 #testimage{
@@ -78,7 +79,7 @@ button{
     background-color: transparent;
 }
 
-.inner-container-works, .inner-container-about, .inner-container-home{
+#inner-container-works, #inner-container-about, #inner-container-home{
     display: none;
     background-color: transparent;
 }
