@@ -53,6 +53,8 @@ button{
     border: solid 2px #c64bcf;
     background-color: white;
     color:#9e50cc;
+    height: auto;
+    width: clamp(150px, 100%, 377px);
 }
 
 #testimage{
