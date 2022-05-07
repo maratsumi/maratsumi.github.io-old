@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(async function(){
     $("body").hide();
     $("body").fadeIn(1250);
     $("body").css("display", "flex");
@@ -6,18 +6,10 @@ $(document).ready(function(){
     let aboutShown = false;
     let worksShown = false;
 
-    $("#buttonHome").click(function(){
+    $("#buttonHome").click(async function(){
         homeShown = true;
-        if (aboutShown) {
-            $(".inner-container").fadeOut(250);
-            $("#about").slideUp(750);
-            aboutShown = false;
-        }
-        if (worksShown) {
-            $(".inner-container-works").fadeOut(250);
-            $("#works").slideUp(750);
-            worksShown = false;
-        }
+        await aboutFadeElement();
+        await worksFadeElement();
         
         // $("#about").hide();
         // $("#works").hide();
@@ -28,18 +20,10 @@ $(document).ready(function(){
         $("#home").slideDown(1000);
         $("#home").css("display", "flex");
     });
-    $("#buttonAbout").click(function(){
+    $("#buttonAbout").click(async function(){
         aboutShown = true;
-        if (homeShown) {
-            $(".inner-container-home").fadeOut(250);
-            $("#home").slideUp(750);
-            homeShown = false;
-        }
-        if (worksShown) {
-            $(".inner-container-works").fadeOut(250);
-            $("#works").slideUp(750);
-            worksShown = false;
-        }
+        await homeFadeElement();
+        await worksFadeElement();
         
         // $("#about").hide();
         // $("#works").hide();
@@ -50,18 +34,10 @@ $(document).ready(function(){
         $("#about").slideDown(650);
         $("#about").css("display", "flex");
     });
-    $("#buttonWorks").click(function(){
+    $("#buttonWorks").click(async function(){
         worksShown = true;
-        if (aboutShown) {
-            $(".inner-container-about").fadeOut(250);
-            $("#about").slideUp(750);
-            aboutShown = false;
-        }
-        if (homeShown) {
-            $(".inner-container-home").fadeOut(250);
-            $("#home").slideUp(750);
-            homeShown = false;
-        }
+        await aboutFadeElement();
+        await homeFadeElement();
 
         // $("#about").hide();
         // $("#works").hide();
@@ -73,4 +49,27 @@ $(document).ready(function(){
         $("#works").css("display", "flex");
     });
 
+    async function aboutFadeElement(){
+        if (aboutShown) {
+            $(".inner-container-about").fadeOut(250);
+            $("#about").slideUp(750);
+            aboutShown = false;
+        }
+    }
+
+    async function worksFadeElement(){
+        if (worksShown) {
+            $(".inner-container-works").fadeOut(250);
+            $("#works").slideUp(750);
+            worksShown = false;
+        }
+    }
+
+    async function homeFadeElement(){
+        if (homeShown) {
+            $(".inner-container-home").fadeOut(250);
+            $("#home").slideUp(750);
+            homeShown = false;
+        }
+    }
 });
