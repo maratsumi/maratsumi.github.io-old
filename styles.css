@@ -12,8 +12,14 @@ body{
     margin: auto;
     padding: 40px 25px;
     font-family: 'Poppins', sans-serif;
-    color: #CA82F5;
+    color: #bb6fe7;
     background-image: linear-gradient(30deg, #C1ABFF 0%, #FF8FB6 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
 }
 
 .main{
@@ -39,8 +45,14 @@ body{
     width: 25rem;
 }
 
-#list1{
-    font-size: 24px;
+.button{
+    font-size: 22px;
+    margin: 10px;
+    padding: 4px 115px;
+    border-radius: 16px;
+    border: solid 2px #c64bcf;
+    background-color: white;
+    color:#9e50cc;
 }
 
 #testimage{
@@ -48,4 +60,24 @@ body{
     align-content: flex-end;
     width:75%;
     border-radius: 17px;
+}
+
+#divider2{
+    border: 0;
+    border-top: 2px solid #FF739D;
+    opacity: 1;
+    background-image: none;
+    margin-top: 65px;
+    color: transparent;
+    padding: 12px;
+}
+
+#works, #about, #home{
+    display: none;
+    background-color: transparent;
+}
+
+.inner-container-works, .inner-container-about, .inner-container-home{
+    display: none;
+    background-color: transparent;
 }
