@@ -79,7 +79,7 @@ button{
     background-color: transparent;
 }
 
-#inner-container-works, #inner-container-about, #inner-container-home{
+.inner-container-works, .inner-container-about, .inner-container-home{
     display: none;
     background-color: transparent;
 }
