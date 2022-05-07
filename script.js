@@ -25,9 +25,9 @@ $(document).ready(async function(){
             $("#home").slideUp(750);
             homeShown = false;
             setTimeout(function(){
-                $(".inner-container-about").fadeIn(750);
+                $(".inner-container-about").fadeIn(650);
                 $(".inner-container-about").css("display", "flex");
-                $("#about").slideDown(1000);
+                $("#about").slideDown(750);
                 $("#about").css("display", "flex");
             }, 1000);
         } else if (worksShown) {
@@ -35,15 +35,15 @@ $(document).ready(async function(){
             $("#works").slideUp(750);
             worksShown = false;
             setTimeout(function(){
-                $(".inner-container-about").fadeIn(750);
+                $(".inner-container-about").fadeIn(650);
                 $(".inner-container-about").css("display", "flex");
-                $("#about").slideDown(1000);
+                $("#about").slideDown(750);
                 $("#about").css("display", "flex");
             }, 1000);
         } else {
-            $(".inner-container-about").fadeIn(750);
+            $(".inner-container-about").fadeIn(650);
             $(".inner-container-about").css("display", "flex");
-            $("#about").slideDown(1000);
+            $("#about").slideDown(750);
             $("#about").css("display", "flex");
         }
     }
@@ -54,9 +54,9 @@ $(document).ready(async function(){
             $("#about").slideUp(750);
             aboutShown = false;
             setTimeout(function(){
-                $(".inner-container-works").fadeIn(750);
+                $(".inner-container-works").fadeIn(650);
                 $(".inner-container-works").css("display", "flex");
-                $("#works").slideDown(1000);
+                $("#works").slideDown(750);
                 $("#works").css("display", "flex");
             }, 1000);
         } else if (homeShown) {
@@ -64,15 +64,15 @@ $(document).ready(async function(){
             $("#home").slideUp(750);
             homeShown = false;
             setTimeout(function(){
-                $(".inner-container-works").fadeIn(750);
+                $(".inner-container-works").fadeIn(650);
                 $(".inner-container-works").css("display", "flex");
-                $("#works").slideDown(1000);
+                $("#works").slideDown(750);
                 $("#about").css("display", "flex");
             }, 1000);
         } else {
-            $(".inner-container-works").fadeIn(750);
+            $(".inner-container-works").fadeIn(650);
             $(".inner-container-works").css("display", "flex");
-            $("#works").slideDown(1000);
+            $("#works").slideDown(750);
             $("#works").css("display", "flex");
         }
     }
@@ -83,9 +83,9 @@ $(document).ready(async function(){
             $("#about").slideUp(750);
             aboutShown = false;
             setTimeout(function(){
-                $(".inner-container-home").fadeIn(750);
+                $(".inner-container-home").fadeIn(650);
                 $(".inner-container-home").css("display", "flex");
-                $("#home").slideDown(1000);
+                $("#home").slideDown(750);
                 $("#home").css("display", "flex");
             }, 1000);
         } else if (worksShown) {
@@ -93,15 +93,15 @@ $(document).ready(async function(){
             $("#works").slideUp(750);
             worksShown = false;
             setTimeout(function(){
-                $(".inner-container-home").fadeIn(750);
+                $(".inner-container-home").fadeIn(650);
                 $(".inner-container-home").css("display", "flex");
-                $("#home").slideDown(1000);
+                $("#home").slideDown(750);
                 $("#home").css("display", "flex");
             }, 1000);
         } else {
-            $(".inner-container-home").fadeIn(750);
+            $(".inner-container-home").fadeIn(650);
             $(".inner-container-home").css("display", "flex");
-            $("#home").slideDown(1000);
+            $("#home").slideDown(750);
             $("#home").css("display", "flex");
         }
     }
