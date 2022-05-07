@@ -8,68 +8,101 @@ $(document).ready(async function(){
 
     $("#buttonHome").click(async function(){
         homeShown = true;
-        await aboutFadeElement();
-        await worksFadeElement();
-        
-        // $("#about").hide();
-        // $("#works").hide();
-        // $("#home").hide();
-        //$(".inner-container").hide();
-        $(".inner-container-home").fadeIn(1000);
-        $(".inner-container-home").css("display", "flex");
-        $("#home").slideDown(1000);
-        $("#home").css("display", "flex");
+        await homeFadeElement();
     });
     $("#buttonAbout").click(async function(){
         aboutShown = true;
-        await homeFadeElement();
-        await worksFadeElement();
-        
-        // $("#about").hide();
-        // $("#works").hide();
-        // $("#home").hide();
-        // $(".inner-container").hide();
-        $(".inner-container-about").fadeIn(1000);
-        $(".inner-container-about").css("display", "flex");
-        $("#about").slideDown(650);
-        $("#about").css("display", "flex");
+        await aboutFadeElement();
     });
     $("#buttonWorks").click(async function(){
         worksShown = true;
-        await aboutFadeElement();
-        await homeFadeElement();
-
-        // $("#about").hide();
-        // $("#works").hide();
-        // $("#home").hide();
-        // $(".inner-container").hide();
-        $(".inner-container-works").fadeIn(1000);
-        $(".inner-container-works").css("display", "flex");
-        $("#works").slideDown(650);
-        $("#works").css("display", "flex");
+        await worksFadeElement();
     });
 
     async function aboutFadeElement(){
-        if (aboutShown) {
-            $(".inner-container-about").fadeOut(250);
-            $("#about").slideUp(750);
-            aboutShown = false;
-        }
-    }
-
-    async function worksFadeElement(){
-        if (worksShown) {
-            $(".inner-container-works").fadeOut(250);
-            $("#works").slideUp(750);
-            worksShown = false;
-        }
-    }
-
-    async function homeFadeElement(){
         if (homeShown) {
             $(".inner-container-home").fadeOut(250);
             $("#home").slideUp(750);
             homeShown = false;
+            setTimeout(function(){
+                $(".inner-container-about").fadeIn(750);
+                $(".inner-container-about").css("display", "flex");
+                $("#about").slideDown(1000);
+                $("#about").css("display", "flex");
+            }, 1000);
+        } else if (worksShown) {
+            $(".inner-container-works").fadeOut(250);
+            $("#works").slideUp(750);
+            worksShown = false;
+            setTimeout(function(){
+                $(".inner-container-about").fadeIn(750);
+                $(".inner-container-about").css("display", "flex");
+                $("#about").slideDown(1000);
+                $("#about").css("display", "flex");
+            }, 1000);
+        } else {
+            $(".inner-container-about").fadeIn(750);
+            $(".inner-container-about").css("display", "flex");
+            $("#about").slideDown(1000);
+            $("#about").css("display", "flex");
+        }
+    }
+
+    async function worksFadeElement(){
+        if (aboutShown) {
+            $(".inner-container-about").fadeOut(250);
+            $("#about").slideUp(750);
+            aboutShown = false;
+            setTimeout(function(){
+                $(".inner-container-works").fadeIn(750);
+                $(".inner-container-works").css("display", "flex");
+                $("#works").slideDown(1000);
+                $("#works").css("display", "flex");
+            }, 1000);
+        } else if (homeShown) {
+            $(".inner-container-home").fadeOut(250);
+            $("#home").slideUp(750);
+            homeShown = false;
+            setTimeout(function(){
+                $(".inner-container-works").fadeIn(750);
+                $(".inner-container-works").css("display", "flex");
+                $("#works").slideDown(1000);
+                $("#about").css("display", "flex");
+            }, 1000);
+        } else {
+            $(".inner-container-works").fadeIn(750);
+            $(".inner-container-works").css("display", "flex");
+            $("#works").slideDown(1000);
+            $("#works").css("display", "flex");
+        }
+    }
+
+    async function homeFadeElement(){
+        if (aboutShown) {
+            $(".inner-container-about").fadeOut(250);
+            $("#about").slideUp(750);
+            aboutShown = false;
+            setTimeout(function(){
+                $(".inner-container-home").fadeIn(750);
+                $(".inner-container-home").css("display", "flex");
+                $("#home").slideDown(1000);
+                $("#home").css("display", "flex");
+            }, 1000);
+        } else if (worksShown) {
+            $(".inner-container-works").fadeOut(250);
+            $("#works").slideUp(750);
+            worksShown = false;
+            setTimeout(function(){
+                $(".inner-container-home").fadeIn(750);
+                $(".inner-container-home").css("display", "flex");
+                $("#home").slideDown(1000);
+                $("#home").css("display", "flex");
+            }, 1000);
+        } else {
+            $(".inner-container-home").fadeIn(750);
+            $(".inner-container-home").css("display", "flex");
+            $("#home").slideDown(1000);
+            $("#home").css("display", "flex");
         }
     }
 });
