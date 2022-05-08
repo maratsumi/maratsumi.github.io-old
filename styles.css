@@ -54,7 +54,7 @@ button{
     background-color: white;
     color:#9e50cc;
     height: auto;
-    width: auto;
+    width: clamp(150px, 100%, auto);
 }
 
 #testimage{
