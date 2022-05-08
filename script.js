@@ -9,24 +9,19 @@ $(document).ready(async function(){
     let aboutShown = false;
     let worksShown = false;
 
-    // Find a way to disallow the user
-    // from opening other options before
-    // the current open one is done opening
-    // Could probably use an if statement
-    // and (a)wait for the elements to fade in first
-    // before allowing the user to click again
-    // would use a finishLoading boolean ?
-
     $("#buttonHome").click(async function(){
         homeShown = true;
+        startLoading();
         await homeFadeElement();
     });
     $("#buttonAbout").click(async function(){
         aboutShown = true;
+        startLoading();
         await aboutFadeElement();
     });
     $("#buttonWorks").click(async function(){
         worksShown = true;
+        startLoading();
         await worksFadeElement();
     });
 
@@ -36,15 +31,18 @@ $(document).ready(async function(){
             homeShown = false;
             setTimeout(function(){
                 $("#about").slideDown(750);
+                finishLoading();
             }, 1000);
         } else if (worksShown) {
             $("#works").slideUp(750);
             worksShown = false;
             setTimeout(function(){
                 $("#about").slideDown(750);
+                finishLoading();
             }, 1000);
         } else {
             $("#about").slideDown(750);
+            finishLoading();
         }
     }
 
@@ -54,15 +52,18 @@ $(document).ready(async function(){
             aboutShown = false;
             setTimeout(function(){
                 $("#works").slideDown(750);
+                finishLoading();
             }, 1000);
         } else if (homeShown) {
             $("#home").slideUp(750);
             homeShown = false;
             setTimeout(function(){
                 $("#works").slideDown(750);
+                finishLoading();
             }, 1000);
         } else {
             $("#works").slideDown(750);
+            finishLoading();
         }
     }
 
@@ -72,15 +73,30 @@ $(document).ready(async function(){
             aboutShown = false;
             setTimeout(function(){
                 $("#home").slideDown(750);
+                finishLoading();
             }, 1000);
         } else if (worksShown) {
             $("#works").slideUp(750);
             worksShown = false;
             setTimeout(function(){
                 $("#home").slideDown(750);
+                finishLoading();
             }, 1000);
         } else {
             $("#home").slideDown(750);
+            finishLoading();
         }
+    }
+
+    function startLoading(){
+        $("#buttonHome").prop('disabled', true);
+        $("#buttonAbout").prop('disabled', true);
+        $("#buttonWorks").prop('disabled', true);
+    }
+
+    function finishLoading(){
+        $("#buttonHome").prop('disabled', false);
+        $("#buttonAbout").prop('disabled', false);
+        $("#buttonWorks").prop('disabled', false);
     }
 });
