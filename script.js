@@ -1,11 +1,11 @@
 $(document).ready(async function(){
     $("body").hide();
-    $("#home").hide();
+    $("#home").show();
     $("#about").hide();
     $("#works").hide();
     $("body").fadeIn(1250);
     
-    let homeShown = false;
+    let homeShown = true;
     let aboutShown = false;
     let worksShown = false;
 
