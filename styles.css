@@ -61,6 +61,11 @@ button{
     color:#9e50cc;
     height: auto;
     width: clamp(100px, 100%, 379px);
+    transition: transform 0.25s ease, fill 0.25s ease, stroke 0.25s ease;
+}
+
+#buttonHome:hover, #buttonAbout:hover, #buttonWorks:hover{
+    transform: scale(1.0756);
 }
 
 #testimage{
