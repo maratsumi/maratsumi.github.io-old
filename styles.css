@@ -22,6 +22,12 @@ button{
     text-decoration: none;
 }
 
+.btn{
+    outline: none;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+}
+
 #main{
     height: auto;
     width: clamp(360px, 100%, 1000px);
