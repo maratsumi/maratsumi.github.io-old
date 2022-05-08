@@ -42,7 +42,7 @@ button{
     opacity: 1;
     background-image: none;
     color: white;
-    width: clamp(10rem, 100%, 25rem);
+    width: clamp(10rem, 100%, 27rem);
 }
 
 #buttonHome, #buttonAbout, #buttonWorks{
