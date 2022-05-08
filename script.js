@@ -9,6 +9,14 @@ $(document).ready(async function(){
     let aboutShown = false;
     let worksShown = false;
 
+    // Find a way to disallow the user
+    // from opening other options before
+    // the current open one is done opening
+    // Could probably use an if statement
+    // and (a)wait for the elements to fade in first
+    // before allowing the user to click again
+    // would use a finishLoading boolean ?
+
     $("#buttonHome").click(async function(){
         homeShown = true;
         await homeFadeElement();
