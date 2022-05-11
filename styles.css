@@ -114,3 +114,7 @@ button{
     width:65%;
     border-radius: 12px;
 }
+
+#footer{
+    opacity: 0.75;
+}
